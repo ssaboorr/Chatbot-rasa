@@ -1,0 +1,56 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - add_data
+
+entities:
+  - phone_number
+  - email_id
+
+slots:
+  name:
+    type: unfeaturized
+  phone_number:
+    type: unfeaturized
+  email_id:
+    type: unfeaturized
+  occupation:
+    type: unfeaturized
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_ask_name
+  - utter_ask_email
+  - utter_ask_number
+  - utter_ask_occupation
+  - action_save_data
+  - Form_info
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ask_name:
+  - text: "What is your name?"
+
+  utter_ask_email:
+  - text: "What is your email?"
+
+  utter_ask_number:
+  - text: "What is your number?"
+
+  utter_ask_occupation:
+  - text: "What is your occupation?"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
